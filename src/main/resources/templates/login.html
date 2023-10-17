@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>KYC_Service_Provider_App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Create navigation bar (header) -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"> </span> 
+					<span class="icon-bar"> </span> 
+					<span class="icon-bar"> </span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}"> Registration and Login Module</a>
+			</div>
+		</div>
+	</nav>
+	
+	<br>
+	<br>
+	<br>
+	
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+				<h1 align = "center"> User Login </h1>
+				
+				
+					<!-- error message -->
+					<div th:if="${param.error}">
+						<div class = "alert alert-danger"> Invalid UserName or Password</div>	
+					</div>
+					
+					<!-- logout Message -->
+					<div th:if="${param.logout}">
+						<div class = "alert alert-info">You Have been logged out </div>
+					</div>
+					
+					
+					<!-- form for Login -->
+					<form th:action= "@{/login}" method = "post">
+						<div class = "form-group">
+							<label class="control-label" for = "username"> Username </label>
+							<input type = "text" class = "form-control" id = "username" name = "username" placeholder = "Enter Email ID" autofocus = "auotfocus" />
+						</div>
+						
+						<div class = "form-group">
+							<label for = "password"> Password </label>
+							<input type = "password" class = "form-control" id = "password" name = "password" placeholder = "Enter password">
+						</div>
+						
+						<div class="form-group">
+								<button type="submit" class="btn btn-success"> Log In </button>
+						</div>
+					</form>
+				<div class="form-group">
+						<span>New User?<a href="/" th:href="@{/registration}">Register here</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

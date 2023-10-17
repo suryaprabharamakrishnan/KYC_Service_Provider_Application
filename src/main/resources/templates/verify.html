@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>KYC_Service_Provider_App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script> 
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> </script> 
+    <style>
+        
+    @media (min-width: 0) {
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+        .navbar-nav {
+            float: none !important;
+            margin: 7.5px -15px;
+        }
+        .navbar-nav>li {
+            float: none;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+	</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="true" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"> </span> 
+					<span class="icon-bar"> </span> 
+					<span class="icon-bar"> </span>
+				</button>
+				<a class="navbar-brand" href="#" th:href="@{/}"> Home </a>
+			</div>
+			<div id = "navbar" class = "collapse">
+				<ul class = "nav navbar-nav">
+				<li><a class= "navbar-brand" href="/" th:href="@{/KYCcreation}"> Create KYC </a></li>
+				<li><a class= "navbar-brand" href="/" th:href="@{/KYCupdation}"> Update KYC </a></li>
+				<li><a class= "navbar-brand" href="/" th:href="@{/KYCview}"> View KYC  </a></li>
+				<li><a class= "navbar-brand" href="/" th:href="@{/KYCdeletion}"> Delete KYC </a></li>
+				<li><a class= "navbar-brand" href="/" th:href="@{/panVerification}"> Verify KYC </a></li>
+				<li sec:authorize = "isAuthenticated()"><a class= "navbar-brand" href="/" th:href = "@{/logout}">LogOut</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-6 col-md-offset-3">
+								
+					<!-- success message th:if is themeleaf attribute-->
+					<div th:if="${param.success}">
+						<div class="alert alert-info"> PAN Card details entered is verified!</div>
+					</div>
+				
+				
+					<!-- error message -->
+					<div th:if="${param.panerror}">
+						<div class = "alert alert-danger"> Oops! PAN Card details entered is not correct!</div>	
+					</div>
+					
+					
+					<h1 align = "center"> PAN Verification </h1>
+					<form th:action= "@{/panVerification}" method = "post" th:object="${pan}">
+					
+					<!-- form for KYC Creation -->
+					<div class="form-group">
+						<label class="control-label" for="panNumber">
+							PAN Number
+						</label>
+						<input id="panNumber" class="form-control" th:field="*{panNumber}" required
+							autofocus="autofocus" />
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="cardHolderName">
+							Card Holder Name
+						</label>
+						<input id="cardHolderName" class="form-control" th:field="*{cardHolderName}" required
+							autofocus="autofocus" />
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label" for="dateOfBirth">
+							DOB
+						</label>
+						<input type="date" id="dateOfBirth" class="form-control" th:field="*{dateOfBirth}" required
+							autofocus="autofocus" />
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label" for="fatherName">
+							Father Name
+						</label>
+						<input id="fatherName" class="form-control" th:field="*{fatherName}" required
+							autofocus="autofocus" />
+					</div>
+					
+					
+					<div class="form-group" align = "center">
+						<button type="submit" class="btn btn-success"> Verify </button>
+					</div>
+					
+					</form>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	
+	
+	
