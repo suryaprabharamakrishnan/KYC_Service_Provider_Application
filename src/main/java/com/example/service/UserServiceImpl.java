@@ -38,6 +38,12 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public boolean isValidEmail(String email) {
+		String regex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*" + "@" + "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+		return email.matches(regex);
+	}
+
+	@Override
 	public boolean loadUserByEmailname(String email) {
 		User user = userRepository.findByEmail(email);
 		if (user == null) {
