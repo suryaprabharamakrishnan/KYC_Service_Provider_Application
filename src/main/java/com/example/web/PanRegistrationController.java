@@ -24,7 +24,8 @@ public class PanRegistrationController {
 	private PanService panService;
 	private PanUserRepository panUserRepository;
 	private UserRepository userRepository;
-
+	
+	//Injecting Dependencies
 	public PanRegistrationController(PanService panService, PanUserRepository panUserRepository,
 			UserRepository userRepository) {
 		super();
@@ -32,7 +33,8 @@ public class PanRegistrationController {
 		this.panUserRepository = panUserRepository;
 		this.userRepository = userRepository;
 	}
-
+	
+	//Creation of Model Attribute
 	@ModelAttribute("pan")
 	public PanRegistrationDTO pregistrationDTO() {
 		return new PanRegistrationDTO();
