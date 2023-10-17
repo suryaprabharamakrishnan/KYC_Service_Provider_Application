@@ -9,4 +9,6 @@ public interface UserService extends UserDetailsService {
 	User save(UserRegistrationDTO registrationDTO); // method to save user register data
 
 	boolean loadUserByEmailname(String email);
+
+	boolean isValidEmail(String email);
 }
