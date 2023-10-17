@@ -33,6 +33,10 @@ public class UserRegistrationController {
 
 	@PostMapping
 	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDTO registrationDTO) {
+		if (!userService.isValidEmail(registrationDTO.getEmail())) {
+			return "redirect:/registration?emailformaterror";
+		}
+		
 		if (userService.loadUserByEmailname(registrationDTO.getEmail())) {
 			return "redirect:/registration?emailerror";
 
