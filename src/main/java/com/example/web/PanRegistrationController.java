@@ -107,9 +107,10 @@ public class PanRegistrationController {
 	}
 
 	@PostMapping("/KYCdeletion")
-	public String deletePanCard(@ModelAttribute PanDetails pan) {
+	public String deletePanCard(@ModelAttribute("pan") PanRegistrationDTO panregistrationDTO) {
 		String email = SecurityContextHolder.getContext().getAuthentication().getName();
 		User user = userRepository.findByEmail(email);
+		PanDetails pan = panService.viewByPanNumber(panregistrationDTO.getPanNumber());
 		if (pan.getUser() == user) {
 			panService.deleteByPanNumber(pan.getPanNumber());
 			return "redirect:/KYCdeletion?success";
