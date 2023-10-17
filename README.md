@@ -10,26 +10,26 @@
   <img width="960" alt="Screenshot 2023-10-17 180731" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/b3766f66-21af-4e87-b596-b5bb924889ab">
 
   # LoginPage
-  
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/a5f27862-399b-4b09-b623-24cbec5c56e8">
-  
+  <img width="960" alt="Screenshot 2023-10-17 180819" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/a647527c-6130-468b-8c8f-c54c4fc79231">
+
   # HomePage
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/00a5b0b9-a432-411c-a404-4d0c8d6fe5c6">
+  <img width="960" alt="Screenshot 2023-10-17 181411" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/d64f43d7-a107-4a20-918c-9c354d078f3a">
+
   
   # KYC Creation
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/93adbc81-aec2-4360-af05-f201cc3acf12">
-  
+  <img width="960" alt="Screenshot 2023-10-17 181109" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/388a400b-56c4-4c64-b7eb-e35c44803064">
+
   # KYC Updation
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/9a338881-bc94-4bfd-a125-90089de5b1db">
-  
+  <img width="960" alt="Screenshot 2023-10-17 181219" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/89920442-92d9-424a-8e6e-ed30d2e67a50">
+
   # KYC View
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/060410ac-3246-4783-a984-8473f050de63">
-  
+  <img width="960" alt="Screenshot 2023-10-17 181458" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/aaa0dff2-cc6b-4f15-a6a8-1f87c7a1f393">
+ 
   # KYC Deletion
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/aa1d978b-cc5c-4d89-aab9-4a5099edba6c">
-  
+  <img width="960" alt="Screenshot 2023-10-17 181530" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/22cb40de-e4eb-428b-883d-0f9eafd39413">
+
   # KYC Verification
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/e654f033-b6a4-4de2-9b96-ca5ded896ad9">
+  <img width="960" alt="Screenshot 2023-10-17 181633" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_Application/assets/33887093/f6b744f7-84e2-4aa8-b64d-fb54cd6bed7c">
 
 # Application Code Overview
 The Java code implementation consists of these key functions:
