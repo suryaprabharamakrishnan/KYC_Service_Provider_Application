@@ -7,7 +7,6 @@
 
 # Web Application for KYC_Service_Provider_App:
   # RegistrationPage
-  <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_App/assets/33887093/5c7ae340-c2e8-410a-beb4-809e5b9e5be1">
   
   # LoginPage
   <img width="960" alt="image" src="https://github.com/suryaprabharamakrishnan/KYC_Service_Provider_App/assets/33887093/a5f27862-399b-4b09-b623-24cbec5c56e8">
