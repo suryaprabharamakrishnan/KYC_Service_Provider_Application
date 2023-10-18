@@ -8,7 +8,9 @@ import com.example.web.datatransferobject.UserRegistrationDTO;
 public interface UserService extends UserDetailsService {
 	User save(UserRegistrationDTO registrationDTO); // method to save user register data
 
-	boolean loadUserByEmailname(String email);
+	public boolean loadUserByEmailname(String email);
 
-	boolean isValidEmail(String email);
+	public boolean isValidEmail(String email);
+
+	public boolean isValidName(String firstName, String lastName);
 }
