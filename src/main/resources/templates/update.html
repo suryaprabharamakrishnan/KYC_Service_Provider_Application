@@ -71,7 +71,7 @@
 		<div class = "row">
 			<div class = "col-md-6 col-md-offset-3">
 								
-					<!-- success message th:if is themeleaf attribute-->
+					<!-- success message -->
 					<div th:if="${param.success}">
 						<div class="alert alert-info"> Congratulations...Your Pan KYC is Updated successfully!</div>
 					</div>
@@ -86,7 +86,7 @@
 					<h1 align = "center"> UPDATE KYC</h1>
 					<form th:action= "@{/KYCupdation}" method = "post" th:object="${pan}">
 					
-					<!-- form for KYC Creation -->
+					<!-- form for KYC Updation -->
 					<div class="form-group">
 						<label class="control-label" for="panNumber">
 							PAN Number
