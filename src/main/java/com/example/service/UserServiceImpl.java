@@ -36,6 +36,12 @@ public class UserServiceImpl implements UserService {
 				passwordEncoder.encode(registrationDTO.getPassword()), Arrays.asList(new Role("ROLE_USER")));
 		return userRepository.save(user);
 	}
+	
+	@Override
+	public boolean isValidName(String firstName, String lastName) {
+		String regex = "^[A-Za-z]+$";
+		return (firstName.matches(regex) && lastName.matches(regex));
+	}
 
 	@Override
 	public boolean isValidEmail(String email) {
