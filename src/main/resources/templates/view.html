@@ -70,17 +70,16 @@
 	<div class = "container">
 		<div class = "row">
 			<div class = "col-md-6 col-md-offset-3">
-								
-													
+																
 					<!-- error message -->					
 					<div th:if="${param.panAccessError}">
 						<div class = "alert alert-danger"> Oops! The PAN card number entered does not belong to your account!</div>	
 					</div>
 					
 					<h1 align = "center"> VIEW KYC</h1>
+				
+					<!-- form for KYC View -->
 					<form th:action= "@{/KYCview}" method="post" th:object="${pan}">
-					
-						<!-- form for KYC Creation -->
 						<div class="form-group">
 							<label class="control-label" for="panNumber"> PAN Number </label> 
 							<input id="panNumber" class="form-control" th:field="*{panNumber}" autofocus="autofocus" required />
@@ -89,23 +88,21 @@
 						<div class="form-group" align = "center">
 							<button type="submit" class="btn btn-success"> View </button>
 						</div>
-					
 					</form>
 					
-					<!-- success message th:if is themeleaf attribute -->
+					<!-- success message -->
 					<div th:if="${panCard}">
 					    <h2>PAN Card Details</h2>
-					   		 <p>PAN Number: <span th:text="${panCard.panNumber}"></span></p>
-					   		 <p>Card Holder Name: <span th:text="${panCard.cardHolderName}"></span></p>
-					   		 <p>Date Of Birth: <span th:text="${panCard.dateOfBirth}"></span></p>
-					   		 <p>Father Name: <span th:text="${panCard.fatherName}"></span></p>
+					   		 <p>&emsp; PAN Number      : <span th:text="${panCard.panNumber}"></span></p>
+					   		 <p>&emsp; Card Holder Name: <span th:text="${panCard.cardHolderName}"></span></p>
+					   		 <p>&emsp; Date Of Birth   : <span th:text="${panCard.dateOfBirth}"></span></p>
+					   		 <p>&emsp; Father Name     : <spanth:text="${panCard.fatherName}"></span></p>
 					</div>
 					
-				
+				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
 	
 	
