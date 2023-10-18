@@ -22,9 +22,9 @@ public class PanServiceImpl implements PanService {
 	}
 
 	@Override
-	public boolean isValidPanNumber(String panNumber) {
-		String regex = "[A-Z]{5}[0-9]{4}[A-Z]{1}";
-		return panNumber.matches(regex);
+	public boolean isValidPanNumber(String panNumber, String firstName) {
+		String regex = "[A-Z]{3}[^DEIKM-OQ-SU-Z]{1}[A-Z]{1}[0-9]{4}[A-Z]{1}";
+		return (panNumber.matches(regex) && (panNumber.charAt(4) == firstName.charAt(0)));
 	}
 
 	@Override
