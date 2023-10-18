@@ -14,6 +14,6 @@ public interface PanService {
 
 	PanDetails updatePan(PanDetails panDetails);
 
-	boolean isValidPanNumber(String panNumber);
+	boolean isValidPanNumber(String panNumber, String firstName);
 
 }
