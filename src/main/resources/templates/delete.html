@@ -71,7 +71,7 @@
 		<div class = "row">
 			<div class = "col-md-6 col-md-offset-3">
 								
-					<!-- success message th:if is themeleaf attribute-->
+					<!-- success message -->
 					<div th:if="${param.success}">
 						<div class="alert alert-info"> Your Pan KYC is deleted!</div>
 					</div>
@@ -85,7 +85,7 @@
 					<h1 align = "center"> DELETE KYC</h1>
 					<form th:action= "@{/KYCdeletion}" method="post" th:object="${pan}">
 					
-						<!-- form for KYC Creation -->
+						<!-- form for KYC Deletion -->
 						<div class="form-group">
 							<label class="control-label" for="panNumber"> PAN Number </label> 
 							<input id="panNumber" class="form-control" th:field="*{panNumber}" autofocus="autofocus" required />
