@@ -34,9 +34,14 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 
-				<!-- success message th:if is themeleaf attribute-->
+				<!-- success message -->
 				<div th:if="${param.success}">
 					<div class="alert alert-info"> You've successfully registered to our application!</div>
+				</div>
+
+				<!-- error messages -->
+				<div th:if="${param.nameformaterror}">
+					<div class="alert alert-danger"> Firstname or Lastname is not valid </div>
 				</div>
 				
 				<div th:if="${param.emailerror}">
@@ -48,7 +53,8 @@
 				</div>
 				
 				<h1> Registration </h1>
-				
+
+				<!-- form Creation -->
 				<form th:action="@{/registration}" method="post" th:object="${user}">
 					<div class="form-group">
 						<label class="control-label" for="firstName">
