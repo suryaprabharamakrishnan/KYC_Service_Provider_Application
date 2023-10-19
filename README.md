@@ -33,6 +33,8 @@
 
 # Application Code Overview
 The Java code implementation consists of these key functions:
+  * registerUser: Creates a new user.
+  * loginUser: validates the user details against the store data and allows the user to access the application.
   * createPanCard: Creates a new PAN Card entry.
   * updatePanCard: Updates the PAN Card information.
   * viewPanCard: Retrieves the PAN Card details from the private data collection.
