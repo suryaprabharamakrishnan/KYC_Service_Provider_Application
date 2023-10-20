@@ -47,15 +47,16 @@ public class PanRegistrationController {
 
 	@PostMapping("/KYCcreation")
 	public String registerPanCard(@ModelAttribute("pan") PanRegistrationDTO panregistrationDTO, Principal principal) {
-		String email = SecurityContextHolder.getContext().getAuthentication().getName();
-		User user = userRepository.findByEmail(email);
-		String firstName = user.getFirstName();
-		if (!panService.isValidPanNumber(panregistrationDTO.getPanNumber(),firstName)) {
+		if (!panService.isValidPanNumber(panregistrationDTO.getPanNumber(),panregistrationDTO.getCardHolderName())) {
 			return "redirect:/KYCcreation?panNumberValidationError";
 		}
+		
+		if (!panService.isValidDate(panregistrationDTO.getDateOfBirth())) {
+			return "redirect:/KYCcreation?dateOfBirthError";
+		}
+		
 		if (panService.loadByPanNumber(panregistrationDTO.getPanNumber())) {
 			return "redirect:/KYCcreation?panerror";
-
 		} else {
 			if (panUserRepository.existsByEmail(principal.getName())) {
 				return "redirect:/KYCcreation?pancreationerror";
