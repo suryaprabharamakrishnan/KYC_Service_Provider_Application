@@ -1,5 +1,7 @@
 package com.example.web.datatransferobject;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 
 public class PanRegistrationDTO {
@@ -11,12 +13,12 @@ public class PanRegistrationDTO {
 	private String cardHolderName;
 
 	@Column(name = "date_of_birth")
-	private String dateOfBirth;
+	private LocalDate dateOfBirth;
 
 	@Column(name = "father_Name")
 	private String fatherName;
 
-	public PanRegistrationDTO(String panNumber, String cardHolderName, String dateOfBirth, String fatherName) {
+	public PanRegistrationDTO(String panNumber, String cardHolderName, LocalDate dateOfBirth, String fatherName) {
 		super();
 		this.panNumber = panNumber;
 		this.cardHolderName = cardHolderName;
@@ -44,11 +46,11 @@ public class PanRegistrationDTO {
 		this.cardHolderName = cardHolderName;
 	}
 
-	public String getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
