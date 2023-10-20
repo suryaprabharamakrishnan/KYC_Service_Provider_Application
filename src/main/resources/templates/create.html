@@ -71,7 +71,7 @@
 		<div class = "row">
 			<div class = "col-md-6 col-md-offset-3">
 								
-					<!-- success message th:if is themeleaf attribute-->
+					<!-- success message -->
 					<div th:if="${param.success}">
 						<div class="alert alert-info"> Congratulations...Your Pan KYC is registered successfully!</div>
 					</div>
@@ -80,7 +80,7 @@
 					<!-- error message -->
 					
 					<div th:if="${param.panerror}">
-						<div class = "alert alert-danger"> Oops! PAN Card number entered is already registered!</div>	
+						<div class = "alert alert-danger"> Oops! PAN Card number entered is already registered under different account!</div>	
 					</div>
 					
 					<div th:if="${param.pancreationerror}">
@@ -90,7 +90,11 @@
 					<div th:if="${param.panNumberValidationError}">
 						<div class = "alert alert-danger"> Invalid PAN number format.</div>
 					</div>
-					
+
+					<div th:if="${param.dateOfBirthError}">
+						<div class = "alert alert-danger"> Oops! You have entered futuristic date</div>	
+					</div>
+				
 					<h1 align = "center"> CREATE KYC</h1>
 					<form th:action= "@{/KYCcreation}" method = "post" th:object="${pan}">
 						<!-- form for KYC Creation -->
