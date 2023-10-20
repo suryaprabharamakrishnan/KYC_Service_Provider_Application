@@ -1,5 +1,7 @@
 package com.example.service;
 
+import java.time.LocalDate;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -22,9 +24,15 @@ public class PanServiceImpl implements PanService {
 	}
 
 	@Override
-	public boolean isValidPanNumber(String panNumber, String firstName) {
+	public boolean isValidPanNumber(String panNumber, String cardHolderName) {
 		String regex = "[A-Z]{3}[^DEIKM-OQ-SU-Z]{1}[A-Z]{1}[0-9]{4}[A-Z]{1}";
-		return (panNumber.matches(regex) && (panNumber.charAt(4) == firstName.charAt(0)));
+		return (panNumber.matches(regex)
+				&& (String.valueOf(panNumber.charAt(4)).equalsIgnoreCase(String.valueOf(cardHolderName.charAt(0)))));
+	}
+
+	@Override
+	public boolean isValidDate(LocalDate dateOfBirth) {
+		return !dateOfBirth.isAfter(LocalDate.now());
 	}
 
 	@Override
