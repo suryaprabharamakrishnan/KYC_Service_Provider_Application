@@ -1,5 +1,7 @@
 package com.example.Entities;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -27,7 +29,7 @@ public class PanDetails {
 	private String cardHolderName;
 
 	@Column(name = "date_of_birth")
-	private String dateOfBirth;
+	private LocalDate dateOfBirth;
 
 	@Column(name = "father_Name")
 	private String fatherName;
@@ -40,7 +42,7 @@ public class PanDetails {
 
 	}
 
-	public PanDetails(String panNumber, String cardHolderName, String dateOfBirth, String fatherName, User user) {
+	public PanDetails(String panNumber, String cardHolderName, LocalDate dateOfBirth, String fatherName, User user) {
 		super();
 		this.panNumber = panNumber;
 		this.cardHolderName = cardHolderName;
@@ -73,11 +75,11 @@ public class PanDetails {
 		this.cardHolderName = cardHolderName;
 	}
 
-	public String getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
